@@ -25,10 +25,10 @@ class _SplashScreenState extends State<SplashScreen>
     controller.addListener(() {
       setState(() {});
     });
-    // Future.delayed(Duration(seconds: 3), () {
-    //   Navigator.pushReplacementNamed(
-    //       context, '/login'); // Replace '/main' with your main screen route.
-    // });
+    Future.delayed(const Duration(seconds: 4), () {
+      Navigator.pushReplacementNamed(
+          context, '/login'); // Replace '/main' with your main screen route.
+    });
   }
 
   @override
@@ -46,17 +46,23 @@ class _SplashScreenState extends State<SplashScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              'assets/logo.png',
-              width: 270,
-              height: 270,
+            Hero(
+              tag: 'logo',
+              child: Image.asset(
+                'assets/logo.png',
+                width: 270,
+                height: 270,
+              ),
             ),
-            const Text(
-              'Micro Map',
-              style: TextStyle(
-                fontSize: 36,
-                color: kBlueColour3,
-                fontFamily: 'Plus Jakarta Sans',
+            const Hero(
+              tag: 'title',
+              child: Text(
+                'Micro Map',
+                style: TextStyle(
+                  fontSize: 36,
+                  color: kBlueColour3,
+                  fontFamily: 'Plus Jakarta Sans',
+                ),
               ),
             ),
             Container(
