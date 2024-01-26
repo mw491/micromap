@@ -15,10 +15,13 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'assets/logo.png',
-                    height: 220,
-                    width: 220,
+                  Hero(
+                    tag: 'logo',
+                    child: Image.asset(
+                      'assets/logo.png',
+                      height: 220,
+                      width: 220,
+                    ),
                   ),
                   const Text(
                     'Micro Map',
