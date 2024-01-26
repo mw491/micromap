@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     animationColour = ColorTween(begin: kBlueColour1, end: kBackgroundColour)
@@ -25,9 +25,8 @@ class _SplashScreenState extends State<SplashScreen>
     controller.addListener(() {
       setState(() {});
     });
-    Future.delayed(const Duration(seconds: 4), () {
-      Navigator.pushReplacementNamed(
-          context, '/login'); // Replace '/main' with your main screen route.
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, '/login');
     });
   }
 
@@ -46,23 +45,17 @@ class _SplashScreenState extends State<SplashScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Hero(
-              tag: 'logo',
-              child: Image.asset(
-                'assets/logo.png',
-                width: 270,
-                height: 270,
-              ),
+            Image.asset(
+              'assets/logo.png',
+              height: 270,
+              width: 270,
             ),
-            const Hero(
-              tag: 'title',
-              child: Text(
-                'Micro Map',
-                style: TextStyle(
-                  fontSize: 36,
-                  color: kBlueColour3,
-                  fontFamily: 'Plus Jakarta Sans',
-                ),
+            const Text(
+              'Micro Map',
+              style: TextStyle(
+                fontSize: 36,
+                color: kBlueColour3,
+                fontFamily: 'Plus Jakarta Sans',
               ),
             ),
             Container(
