@@ -135,6 +135,7 @@ class InputWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 45,
+      width: 270,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey,
@@ -143,30 +144,28 @@ class InputWidget extends StatelessWidget {
           Radius.circular(4.0),
         ),
       ),
-      child: IntrinsicHeight(
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 0, 4, 0),
-              child: Icon(icon),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 0, 4, 0),
+            child: Icon(icon),
+          ),
+          const SizedBox(
+            height: 28,
+            child: VerticalDivider(
+              thickness: 2,
+              color: Colors.black26,
             ),
-            const SizedBox(
-              height: 28,
-              child: VerticalDivider(
-                thickness: 2,
-                color: Colors.black26,
+          ),
+          Expanded(
+            child: TextField(
+              obscureText: obscureText,
+              decoration: const InputDecoration(
+                border: InputBorder.none,
               ),
             ),
-            Expanded(
-              child: TextField(
-                obscureText: obscureText,
-                decoration: const InputDecoration(
-                  border: InputBorder.none,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
