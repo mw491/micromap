@@ -158,10 +158,13 @@ class InputWidget extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: TextField(
-              obscureText: obscureText,
-              decoration: const InputDecoration(
-                border: InputBorder.none,
+            child: Container(
+              height: 33,
+              child: TextField(
+                obscureText: obscureText,
+                decoration: const InputDecoration(
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),
