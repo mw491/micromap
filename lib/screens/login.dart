@@ -75,7 +75,10 @@ class LoginContainer extends StatelessWidget {
             ),
             const SizedBox(height: 5.0),
             const InputWidget(
-                icon: Icons.mail_outline_rounded, obscureText: false),
+              icon: Icons.mail_outline_rounded,
+              obscureText: false,
+              textType: TextInputType.emailAddress,
+            ),
             const SizedBox(height: 16.0),
             const Text(
               'Password',
@@ -85,7 +88,11 @@ class LoginContainer extends StatelessWidget {
                   fontFamily: 'Plus Jakarta Sans'),
             ),
             const SizedBox(height: 5.0),
-            const InputWidget(icon: Icons.key, obscureText: true),
+            const InputWidget(
+              icon: Icons.key,
+              obscureText: true,
+              textType: TextInputType.visiblePassword,
+            ),
             const SizedBox(height: 5.0),
             Container(
               alignment: Alignment.centerRight,
@@ -126,10 +133,15 @@ class LoginContainer extends StatelessWidget {
 }
 
 class InputWidget extends StatelessWidget {
-  const InputWidget({super.key, required this.icon, required this.obscureText});
+  const InputWidget(
+      {super.key,
+      required this.icon,
+      required this.obscureText,
+      required this.textType});
 
   final IconData icon;
   final bool obscureText;
+  final TextInputType textType;
 
   @override
   Widget build(BuildContext context) {
@@ -158,9 +170,10 @@ class InputWidget extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(
+            child: SizedBox(
               height: 33,
               child: TextField(
+                keyboardType: textType,
                 obscureText: obscureText,
                 decoration: const InputDecoration(
                   border: InputBorder.none,
