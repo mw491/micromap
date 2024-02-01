@@ -11,16 +11,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Your App',
-      theme: ThemeData(
-          // Your app theme
-          ),
-      initialRoute: '/splash',
-      routes: {
-        '/splash': (context) => const SplashScreen(),
-        '/login': (context) => const LoginScreen(),
-      },
+    return SafeArea(
+      child: MaterialApp(
+        title: 'Your App',
+        theme: ThemeData(
+            // Your app theme
+            ),
+        initialRoute: '/splash',
+        routes: {
+          '/splash': (context) => const SplashScreen(),
+          '/login': (context) => const LoginScreen(),
+        },
+      ),
     );
   }
 }
