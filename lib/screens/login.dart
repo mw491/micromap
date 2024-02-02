@@ -124,6 +124,34 @@ class LoginContainer extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            const SizedBox(height: 10.0),
+            SizedBox(
+              height: 25,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Don\'t have an account? ',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xFF585858),
+                        fontFamily: 'Plus Jakarta Sans'),
+                  ),
+                  MaterialButton(
+                    minWidth: 70,
+                    padding: EdgeInsets.zero,
+                    child: const Text(
+                      'Register',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: kBlueColour4,
+                          fontFamily: 'Plus Jakarta Sans'),
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
             )
           ],
         ),
