@@ -111,7 +111,9 @@ class LoginContainer extends StatelessWidget {
             Material(
               borderRadius: BorderRadius.circular(4),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/selection');
+                },
                 color: kBlueColour2,
                 minWidth: 200,
                 height: 45,
