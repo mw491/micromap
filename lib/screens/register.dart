@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:micro_map/constants.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   const Text(
-                    'please sign-in with your details',
+                    'please register with your details',
                     style: TextStyle(
                       fontSize: 14,
                       color: kBlueColour3,
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const Expanded(child: LoginContainer()),
+            const Expanded(child: RegisterContainer()),
           ],
         ),
       ),
@@ -50,8 +50,8 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-class LoginContainer extends StatelessWidget {
-  const LoginContainer({super.key});
+class RegisterContainer extends StatelessWidget {
+  const RegisterContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -93,21 +93,7 @@ class LoginContainer extends StatelessWidget {
               obscureText: true,
               textType: TextInputType.visiblePassword,
             ),
-            const SizedBox(height: 5.0),
-            Container(
-              alignment: Alignment.centerRight,
-              child: MaterialButton(
-                onPressed: () {},
-                child: const Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: kBlueColour4,
-                      fontFamily: 'Plus Jakarta Sans'),
-                ),
-              ),
-            ),
-            const SizedBox(height: 5.0),
+            const SizedBox(height: 30.0),
             Material(
               borderRadius: BorderRadius.circular(4),
               child: MaterialButton(
@@ -116,7 +102,7 @@ class LoginContainer extends StatelessWidget {
                 minWidth: 200,
                 height: 45,
                 child: const Text(
-                  "Login",
+                  "Register",
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
@@ -132,7 +118,7 @@ class LoginContainer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Don\'t have an account? ',
+                    'Already have an account? ',
                     style: TextStyle(
                         fontSize: 14,
                         color: Color(0xFF585858),
@@ -142,14 +128,14 @@ class LoginContainer extends StatelessWidget {
                     minWidth: 70,
                     padding: EdgeInsets.zero,
                     child: const Text(
-                      'Register',
+                      'Login',
                       style: TextStyle(
                           fontSize: 14,
                           color: kBlueColour4,
                           fontFamily: 'Plus Jakarta Sans'),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/register');
+                      Navigator.pushReplacementNamed(context, '/login');
                     },
                   ),
                 ],

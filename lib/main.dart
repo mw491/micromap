@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:micro_map/screens/register.dart';
 import 'screens/splash.dart';
 import 'screens/login.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/splash': (context) => const SplashScreen(),
           '/login': (context) => const LoginScreen(),
+          '/register': (context) => const RegisterScreen(),
         },
       ),
     );
