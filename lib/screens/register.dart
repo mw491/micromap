@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:micro_map/components/input_widget.dart';
 import 'package:micro_map/constants.dart';
-import 'package:micro_map/screens/login.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
