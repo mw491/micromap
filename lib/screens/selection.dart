@@ -90,6 +90,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                const SizedBox(height: 5),
                 DropdownComponent(
                   initialValue: sampleType,
                   list: kSampleTypes,
@@ -109,6 +110,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                const SizedBox(height: 5),
                 DropdownComponent(
                   initialValue: sampleSite,
                   list: kSampleSites,
@@ -128,6 +130,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                const SizedBox(height: 5),
                 DropdownComponent(
                   initialValue: microOrganism,
                   list: kMicroOrganisms,
