@@ -16,8 +16,7 @@ class _TogglebuttonComponentState extends State<TogglebuttonComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(2.0)),
       ),
       height: 37,
@@ -40,12 +39,19 @@ class _TogglebuttonComponentState extends State<TogglebuttonComponent> {
             height: 37,
             decoration: BoxDecoration(
               color: selections_state[index] ? kBlueColour2 : Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(2.0)),
+              borderRadius: index == 0
+                  ? const BorderRadius.only(
+                      topLeft: Radius.circular(2.0),
+                      bottomLeft: Radius.circular(2.0))
+                  : const BorderRadius.only(
+                      topRight: Radius.circular(2.0),
+                      bottomRight: Radius.circular(2.0)),
             ),
-            padding: const EdgeInsets.all(8.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
             child: Text(
               widget.selections[index],
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 13,
                 fontFamily: 'Plus Jakarta Sans',
               ),
