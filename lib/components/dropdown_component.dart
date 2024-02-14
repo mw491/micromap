@@ -28,37 +28,35 @@ class _DropdownComponentState extends State<DropdownComponent> {
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(4)),
       ),
-      child: Expanded(
-        child: DropdownButton(
-          underline: Container(),
-          value: selectedValue,
-          isExpanded: true,
-          iconEnabledColor: kBlueColour2,
-          style: const TextStyle(
-            fontSize: 14,
-            fontFamily: 'Plus Jakarta Sans',
-          ),
-          items: widget.list.map(
-            (String value) {
-              return DropdownMenuItem(
-                  value: value,
-                  child: Text(
-                    value,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                      fontFamily: 'Plus Jakarta Sans',
-                    ),
-                  ));
-            },
-          ).toList(),
-          onChanged: (String? newValue) {
-            widget.onChanged!(newValue!);
-            setState(() {
-              selectedValue = newValue;
-            });
-          },
+      child: DropdownButton(
+        underline: Container(),
+        value: selectedValue,
+        isExpanded: true,
+        iconEnabledColor: kBlueColour2,
+        style: const TextStyle(
+          fontSize: 14,
+          fontFamily: 'Plus Jakarta Sans',
         ),
+        items: widget.list.map(
+          (String value) {
+            return DropdownMenuItem(
+                value: value,
+                child: Text(
+                  value,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontFamily: 'Plus Jakarta Sans',
+                  ),
+                ));
+          },
+        ).toList(),
+        onChanged: (String? newValue) {
+          widget.onChanged!(newValue!);
+          setState(() {
+            selectedValue = newValue;
+          });
+        },
       ),
     );
   }
