@@ -28,3 +28,10 @@ const kMicroOrganisms = [
   'Clostridium difficile',
   'Streptococcus pyogenes',
 ];
+
+const kDiseases = [
+  'Diabetes Mellitus',
+  'Cardiovascular Disease',
+  'Chronic respiratory diseases',
+  'Neurological disorder',
+];
